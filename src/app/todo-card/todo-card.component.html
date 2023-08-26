@@ -1,0 +1,20 @@
+<div class="list-group-item list-group-item-action flex-column align-items-start active todo-card">
+    <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{task.TaskTitle}}</h5>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button 
+                type="button" 
+                class="btn btn-primary"
+                (click)="setSelectedTask(task);
+                        openModal('CHG')"
+                            >Change</button>
+            <button 
+                type="button" 
+                class="btn btn-primary"
+                (click)="setSelectedTask(task); 
+                        deleteTask(task.TaskId)"
+                            >Delete</button>
+        </div>
+    </div>
+    <p class="mb-1">{{ task.TaskDescription}}</p>
+</div>
